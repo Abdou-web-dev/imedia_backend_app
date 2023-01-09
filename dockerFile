@@ -1,0 +1,6 @@
+FROM JAVA:17
+ADD build/libs/*.jar dockerapp.jar
+EXPOSE 8888
+ENTRYPOINT ["JAVA","jar","dockerapp.jar"]
+
+#puis on tape dans le terminal : docker run -p 8020:8888 dockerAppImage
